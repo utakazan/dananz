@@ -1,0 +1,32 @@
+@use 'abstracts/variables' as var;
+
+:host {
+  display: block;
+  padding-bottom: 100px;
+}
+
+.location {
+  &__header {
+    margin-bottom: 20px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__inner {
+    margin-right: 193px;
+  }
+
+  &__subheader {
+    max-width: 279px;
+    margin-bottom: 24px;
+  }
+
+  &__text {
+    max-width: 279px;
+    margin-bottom: 39px;
+    color: var.$on-background-10;
+  }
+}

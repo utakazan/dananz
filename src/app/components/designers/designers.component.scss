@@ -1,0 +1,63 @@
+@use 'abstracts/variables' as var;
+
+:host {
+  display: block;
+  padding-bottom: 100px;
+}
+
+.designers {
+  &__header {
+    margin-bottom: 20px;
+  }
+
+  &__subheader {
+    max-width: 291px;
+    margin-bottom: 24px;
+  }
+
+  &__text {
+    max-width: 471px;
+    margin-bottom: 79px;
+    color: var.$on-background-10;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+
+  &__item {
+    display: flex;
+    position: relative;
+    align-items: flex-end;
+    background-color: var.$primary;
+  }
+
+  &__inner {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+
+    width: 100%;
+    max-width: 258px;
+    padding: 18px 16px;
+    transform: translateX(-50%);
+
+    background-color: var.$background;
+  }
+
+  &__name {
+    display: block;
+    color: var.$on-background-50;
+    font-size: 24px;
+
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  &__position {
+    display: block;
+    color: var.$on-background-10;
+  }
+}

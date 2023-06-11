@@ -5,7 +5,13 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "watch": "ng build --watch --configuration development"
+    "lint": "ng lint",
+    "lint:fix": "ng lint --fix",
+    "lint-style": "stylelint 'src/**/*.scss'",
+    "lint-style:fix": "stylelint 'src/**/*.scss' --fix",
+    "prettier": "prettier --check 'src/**/*.{ts,html,scss,json}'",
+    "prettier:fix": "prettier --write 'src/**/*.{ts,html,scss,json}'",
+    "prepare": "husky install"
   },
   "private": true,
   "dependencies": {
@@ -23,8 +29,30 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^15.2.5",
+    "@angular-eslint/builder": "15.2.1",
+    "@angular-eslint/eslint-plugin": "15.2.1",
+    "@angular-eslint/eslint-plugin-template": "15.2.1",
+    "@angular-eslint/schematics": "15.2.1",
+    "@angular-eslint/template-parser": "15.2.1",
     "@angular/cli": "~15.2.5",
     "@angular/compiler-cli": "^15.2.0",
+    "@commitlint/cli": "^17.5.1",
+    "@commitlint/config-conventional": "^17.4.4",
+    "@typescript-eslint/eslint-plugin": "5.48.2",
+    "@typescript-eslint/parser": "5.48.2",
+    "eslint": "^8.33.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-deprecation": "^1.4.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.2.1",
+    "postcss-scss": "^4.0.6",
+    "prettier": "^2.8.7",
+    "prettier-plugin-organize-attributes": "0.0.5",
+    "stylelint": "^15.4.0",
+    "stylelint-config-property-sort-order-smacss": "^9.1.0",
+    "stylelint-config-standard": "^32.0.0",
+    "stylelint-order": "^6.0.3",
     "typescript": "~4.9.4"
   }
 }

@@ -1,0 +1,114 @@
+@use 'abstracts/variables' as var;
+@use 'abstracts/mixins' as mix;
+
+:host {
+  display: block;
+  padding: 80px 40px;
+}
+.footer {
+  &__container {
+    display: flex;
+    column-gap: 279px;
+    @include mix.container;
+  }
+
+  &__link {
+    width: 130px;
+    margin-bottom: 10px;
+
+    &:hover {
+      color: var.$on-background-10;
+    }
+
+    &:focus {
+      outline-color: var.$primary;
+    }
+
+    &:active {
+      color: var.$on-background-100;
+    }
+  }
+
+  &__header {
+    max-width: 481px;
+  }
+
+  &__form {
+    display: flex;
+    margin-bottom: 40px;
+    padding: 32px 0 15px;
+    column-gap: 28px;
+    border-bottom: 1px solid var.$divider-dark;
+
+    &__label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 23px;
+      color: var.$on-background-50;
+
+      &::first-letter {
+        text-transform: uppercase;
+      }
+
+      &::before {
+        content: '';
+        display: block;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background-color: var.$on-background-50;
+      }
+    }
+
+    &__control {
+      width: 380px;
+      height: 27px;
+      border: none;
+      background-color: var.$background;
+
+      font-family: 'Poppins', 'Arial', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+
+      &::placeholder {
+        color: var.$on-primary-light;
+      }
+
+      &:focus {
+        outline-color: var.$primary;
+      }
+
+      &:invalid {
+        outline-color: var.$error;
+      }
+
+      &:disabled {
+        pointer-events: none;
+      }
+    }
+
+    &__btn {
+      width: 26px;
+      height: 24px;
+      margin-top: 38px;
+
+      &:hover {
+        color: var.$on-background-10;
+      }
+
+      &:focus {
+        outline-color: var.$primary;
+      }
+
+      &:active {
+        color: var.$on-background-100;
+      }
+    }
+  }
+
+  &__social {
+    max-width: 203px;
+    margin-left: auto;
+  }
+}

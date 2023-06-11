@@ -1,0 +1,17 @@
+@use 'abstracts/variables' as var;
+@use 'abstracts/mixins' as mix;
+
+:host {
+  display: block;
+  padding: 40px;
+}
+
+.header {
+  &__container {
+    @include mix.container;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 74px;
+  }
+}

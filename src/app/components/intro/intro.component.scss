@@ -1,0 +1,20 @@
+@use 'abstracts/variables' as var;
+@use 'abstracts/mixins' as mix;
+
+:host {
+  display: block;
+  padding: 57px 0 100px;
+}
+
+.intro {
+  &__header {
+    margin-bottom: 36px;
+    text-align: center;
+  }
+
+  &__text {
+    max-width: 580px;
+    margin: 0 auto 86px;
+    text-align: center;
+  }
+}

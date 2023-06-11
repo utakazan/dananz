@@ -1,0 +1,44 @@
+@use 'abstracts/variables' as var;
+@use 'abstracts/mixins' as mix;
+
+:host {
+  display: block;
+  padding-bottom: 100px;
+}
+
+.achievement {
+  &__header {
+    margin-bottom: 40px;
+  }
+
+  &__item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 120px;
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__name {
+    display: block;
+    max-width: 334px;
+    margin-bottom: 20px;
+    color: var.$on-background-50;
+    font-size: 24px;
+
+    font-weight: 600;
+    line-height: 1.4;
+
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  &__text {
+    max-width: 334px;
+    color: var.$on-background-10;
+  }
+}

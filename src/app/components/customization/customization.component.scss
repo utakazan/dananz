@@ -1,0 +1,26 @@
+@use 'abstracts/variables' as var;
+@use 'abstracts/mixins' as mix;
+
+:host {
+  display: block;
+  padding-bottom: 100px;
+}
+
+.customization {
+  &__header {
+    margin-bottom: 20px;
+  }
+
+  &__subheader {
+    margin-bottom: 56px;
+  }
+
+  &__inner {
+    display: flex;
+    column-gap: 65px;
+  }
+
+  &__statistics {
+    max-width: 252px;
+  }
+}

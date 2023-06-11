@@ -1,0 +1,28 @@
+@use 'abstracts/variables' as var;
+
+:host {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  padding-bottom: 100px;
+}
+
+.overview {
+  &__subheader {
+    margin-bottom: 24px;
+    color: var.$on-background-50;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  &__text {
+    color: var.$on-background-10;
+  }
+
+  &__gallery {
+    &--big {
+      grid-column: 1 / 3;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@use 'abstracts/variables' as var;
+
+.logo {
+  &__link {
+    margin-right: auto;
+
+    &:hover {
+      color: var.$on-background-10;
+    }
+
+    &:focus {
+      outline-color: var.$primary;
+    }
+
+    &:active {
+      color: var.$on-background-100;
+    }
+  }
+}

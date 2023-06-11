@@ -1,0 +1,58 @@
+@use 'abstracts/variables' as var;
+@use 'abstracts/mixins' as mix;
+
+:host {
+  display: block;
+  position: relative;
+  padding: 47px 0 167px;
+}
+
+.material {
+  &__header {
+    max-width: 600px;
+    margin-bottom: 20px;
+  }
+
+  &__subheader {
+    max-width: 348px;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    max-width: 497px;
+    margin-bottom: 23px;
+    color: var.$on-background-10;
+
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+
+  &__btn {
+    max-width: 160px;
+  }
+
+  &__inner {
+
+    display: grid;
+    position: absolute;
+    top: 0;
+    right: 0;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 40px;
+  }
+
+  &__img-left {
+    grid-row: 1 / 3;
+    align-self: self-end;
+  }
+
+  &__img-bottom {
+    grid-column: 2 / 3;
+  }
+
+  &__img {
+    object-fit: contain;
+  }
+}

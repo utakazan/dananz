@@ -1,0 +1,16 @@
+{
+  "*.ts": [
+    "prettier --write --parser typescript",
+    "eslint --fix"
+  ],
+  "*.scss": [
+    "prettier --write",
+    "stylelint --fix"
+  ],
+  "*.html": [
+    "prettier --write --parser angular"
+  ],
+  "*.{json,yml,yaml,md}": [
+    "prettier --write"
+  ]
+}

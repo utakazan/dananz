@@ -1,0 +1,45 @@
+@use 'abstracts/variables' as var;
+@use 'abstracts/mixins' as mix;
+
+:host {
+  display: block;
+  position: relative;
+  padding: 57px 0 160px;
+}
+.hero {
+  &__text {
+    max-width: 681px;
+    margin-bottom: 46px;
+    color: var.$on-background-50;
+    font-size: 72px;
+
+    font-weight: 700;
+    line-height: 1.4;
+  }
+
+  &__statistics {
+    position: absolute;
+    top: 197px;
+    right: 142px;
+    max-width: 252px;
+  }
+
+  &__copyright {
+    position: absolute;
+    top: 170px;
+    right: 0;
+    max-width: 178px;
+    transform: rotate(180deg);
+  }
+
+  // Decorative line
+  &::before {
+    content: '';
+    position: absolute;
+    top: 107px;
+    right: 0;
+    width: 683px;
+    height: 2px;
+    background-color: var.$on-background-100;
+  }
+}

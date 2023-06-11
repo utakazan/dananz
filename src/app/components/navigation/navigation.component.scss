@@ -1,0 +1,31 @@
+@use 'abstracts/variables' as var;
+
+.nav {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 74px;
+    row-gap: 20px;
+  }
+
+  &__link {
+    padding: 14px 0;
+    color: var.$on-background-50;
+    font-size: 16px;
+    line-height: 1.6;
+
+    &:hover {
+      color: var.$on-background-10;
+    }
+
+    &:focus {
+      outline-color: var.$primary;
+    }
+
+    &--active {
+      color: var.$on-background-100;
+      font-weight: 600;
+    }
+  }
+}
